@@ -1,0 +1,9 @@
+.copyright {
+    color: white;
+    position: absolute;
+    bottom: 100px;
+    width: 200px;
+    transform: rotate(-90deg);
+    left: -50px;
+    font-size: 14px;
+}

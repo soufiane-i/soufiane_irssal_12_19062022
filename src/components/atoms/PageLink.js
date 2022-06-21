@@ -1,5 +1,7 @@
-export default function PageLink() {
+import './PageLink.css'
+
+export default function PageLink({link, text}) {
     return(
-        <a href=""></a>
+        <a href={`/${link}`}>{text}</a>
     )
 }

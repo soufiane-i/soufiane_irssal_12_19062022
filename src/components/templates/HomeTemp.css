@@ -1,0 +1,9 @@
+header {
+    height: 95px;
+}
+
+main {
+    display: grid;
+    height: 90vh;
+    grid-template-columns: 110px 1fr;
+}

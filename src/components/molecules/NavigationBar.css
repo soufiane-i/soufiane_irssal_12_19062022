@@ -1,0 +1,6 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+    font-weight: 500;
+}
