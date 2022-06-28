@@ -5,5 +5,11 @@ header {
 main {
     display: grid;
     height: 90vh;
-    grid-template-columns: 110px 1fr;
+    grid-template-columns: 150px 1fr;
+}
+
+.dashboardContainer {
+    padding: 50px 150px;
+    display: grid;
+    grid-template-rows: 160px 1fr;
 }

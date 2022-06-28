@@ -1,0 +1,46 @@
+.radialchart {
+    position: relative;
+    background-color: #FBFBFB;
+    padding: 0 20px;
+}
+
+.radialchart h2{
+/*     position: absolute;
+    left: 0px;
+    top: 10px; */
+    font-size: 16px;
+}
+
+.radialchart p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #74798C;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5rem;
+    width: 50%;
+    margin-bottom: 55px;
+}
+
+.innercircle p span {
+    font-weight: bold;
+    font-size: 28px;
+    color: #282D30;
+    margin-bottom: 8px;
+}
+
+
+.innercircle {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    background-color: white;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}

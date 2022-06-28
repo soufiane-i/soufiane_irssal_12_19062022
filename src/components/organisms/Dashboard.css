@@ -1,0 +1,28 @@
+.dashboard {
+    background-color: white;
+    height: auto;
+    display: flex;
+    gap: 50px;
+}
+
+.dashboard_graphs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dashboard_nutrients {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.dashboard_graphs_bottom {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}

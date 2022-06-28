@@ -1,0 +1,23 @@
+.barchart {
+    background-color: #FBFBFB;
+    width: 1000px;
+    height: 200px;
+    padding: 40px;
+    padding-top: 100px;
+    position: relative;
+}
+
+.barchart h2 {
+    position: absolute;
+    top: 40px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.custom-tooltip {
+    background-color: #E60000;
+    color: white;
+    padding: 10px;
+    font-size: 12px;
+    margin-left: 10px;
+}

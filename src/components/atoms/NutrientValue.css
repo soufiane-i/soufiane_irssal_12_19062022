@@ -1,0 +1,14 @@
+.nutrientValue {
+    margin-left: 40px;
+}
+
+.nutrientValue p:nth-child(1) {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.nutrientValue p:nth-child(2) {
+    
+    color: rgb(92, 92, 92);
+}
