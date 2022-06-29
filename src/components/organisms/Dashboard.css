@@ -1,28 +1,31 @@
 .dashboard {
     background-color: white;
-    height: auto;
+    height: 80%;
     display: flex;
-    gap: 50px;
 }
 
 .dashboard_graphs {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 82%;
+    padding-right: 40px;
+    height: 100%;
 }
 
 .dashboard_nutrients {
-    width: 100%;
+    width: 19%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 30px;
-    padding: 0 20px;
 }
 
 .dashboard_graphs_bottom {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: flex-end;
+    height: 49%;
 }

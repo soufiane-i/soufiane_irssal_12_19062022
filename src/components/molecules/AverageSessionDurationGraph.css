@@ -1,8 +1,11 @@
 .lineChart {
+    width: 25%;
+    height: 250px;
     background-color: #FF0000;
     border-radius: 10px;
     padding: 0 20px;
     position: relative;
+    border-radius: 5px;
 }
 
 .custom-tooltip {

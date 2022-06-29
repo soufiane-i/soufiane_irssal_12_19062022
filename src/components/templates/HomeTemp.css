@@ -1,15 +1,27 @@
+#root{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
 header {
-    height: 95px;
+    height: 10%;
 }
 
 main {
+    height: 90%;
     display: grid;
-    height: 90vh;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 1fr 10fr;
+}
+
+.sportNav {
+    width: 150px;
 }
 
 .dashboardContainer {
-    padding: 50px 150px;
-    display: grid;
-    grid-template-rows: 160px 1fr;
+    padding: 30px 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

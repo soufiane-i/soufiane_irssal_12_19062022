@@ -6,7 +6,7 @@ import PerformanceGraph from '../molecules/PerformanceGraph'
 import ScoreGraph from '../molecules/ScoreGraph'
 
 export default function Dashboard({score, keyData, activity, averageSession, performances}) {
-    console.log(score);
+
     return(
         <article className="dashboard">
             <div className='dashboard_graphs'>

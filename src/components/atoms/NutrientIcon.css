@@ -1,0 +1,22 @@
+.nutrientIcon {
+    height: 60px ;
+    width: auto;
+    padding: 0 20px;
+}
+
+
+@media screen and (max-width: 1345px) {
+    .nutrientIcon {
+        height: 40px;
+        padding: 0 15px;
+    }
+    
+}
+
+@media screen and (min-width: 1345px) and (max-width: 1660px) {
+    .nutrientIcon {
+        height: 50px;
+        padding: 0 15px;
+    }
+    
+}
