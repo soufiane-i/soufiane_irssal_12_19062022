@@ -4,7 +4,6 @@ import './ScoreGraph.css'
 
 export default function ScoreGraph(score) {
     let todayScore = score.score *10;
-    console.log(todayScore);
     const data = [
         { name: 'todayScore', x: todayScore, fill: '#E60000' },
       ];

@@ -3,7 +3,10 @@ import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 
 
-
+/**
+ * 
+ * @returns 
+ */
 export default function Home() {
     const params = useParams();
  

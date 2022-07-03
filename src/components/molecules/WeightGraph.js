@@ -2,7 +2,15 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Resp
 import './WeightGraph.css'
 
 export default function WeightGraph({activity}) {
+  let day = 1;
 
+  if (activity && activity.sessions) {
+    activity.sessions.map(e => {
+      e.dayN = day.toString();
+      day++;
+
+    }) 
+  } 
 
     return(
         <>
@@ -11,7 +19,7 @@ export default function WeightGraph({activity}) {
             <ResponsiveContainer width="100%" height="100%">
          <BarChart data={activity.sessions}  >
             <CartesianGrid strokeDasharray="2 2" vertical={false}/>
-            <XAxis  tickLine={false} dy={15}  />
+            <XAxis  tickLine={false} dy={15} dataKey="dayN"  />
             <YAxis yAxisId="right" orientation="right" dataKey={"kilogram"} domain={['dataMin - 1', 'dataMax + 1']}  axisLine={false} tickLine={false} tickCount={4}/>
             <YAxis yAxisId="left" orientation="left" dataKey={"calories"} domain={["dataMin -100", "dataMax + 100"]}width={0}/>
             <Tooltip contentStyle={{backgroundColor: 'red'}} itemStyle={{color: 'white'}} content={<CustomTooltip />} />
@@ -29,7 +37,7 @@ export default function WeightGraph({activity}) {
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (
-      <div className="custom-tooltip">
+      <div className="barChart-custom-tooltip">
         <p className="label">{` ${payload[0].value}kg`}</p>
         <p className="label">{` ${payload[1].value}Kcal`}</p>
       </div>
