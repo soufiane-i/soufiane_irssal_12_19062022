@@ -3,9 +3,13 @@ import Header from "../organisms/Header"
 import SportNavigation from '../organisms/SportNavigation'
 import Dashboard from '../organisms/Dashboard'
 import DashboardHeader from '../organisms/DashboardHeader'
+import PropTypes from 'prop-types';
+
+
 
 
 export default function HomeTemp({user, activity, averageSession, averagePerformance}) {
+
     let firstName = ''
     let keyData = ''
     let performances = ''
@@ -27,7 +31,6 @@ export default function HomeTemp({user, activity, averageSession, averagePerform
         performances = averagePerformance
     }
 
-
     return(
         <>
         <Header/>
@@ -40,4 +43,11 @@ export default function HomeTemp({user, activity, averageSession, averagePerform
         </main>
         </>
     )
+} 
+
+HomeTemp.propTypes = {
+    user: PropTypes.object,
+    activity: PropTypes.object,
+    averageSession: PropTypes.object,
+    averagePerformance: PropTypes.object,
 } 

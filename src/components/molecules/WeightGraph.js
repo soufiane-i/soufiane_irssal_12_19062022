@@ -1,14 +1,15 @@
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import './WeightGraph.css'
+import PropTypes from 'prop-types';
 
 export default function WeightGraph({activity}) {
+
   let day = 1;
 
   if (activity && activity.sessions) {
     activity.sessions.map(e => {
       e.dayN = day.toString();
       day++;
-
     }) 
   } 
 
@@ -48,3 +49,6 @@ const CustomTooltip = ({ active, payload, label }) => {
 };
 
 
+WeightGraph.propTypes = {
+  activity: PropTypes.object
+} 

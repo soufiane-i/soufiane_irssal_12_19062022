@@ -3,7 +3,6 @@ import './PerformanceGraph.css'
 
 export default function PerformanceGraph(performances) {
 
-    console.log(performances.performances.data);
     if (performances && performances.performances.data) {
         performances.performances.data.map(e => {
           if(e.kind === 1) e.kindName = 'cardio';
