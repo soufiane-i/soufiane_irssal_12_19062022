@@ -2,10 +2,18 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import './WeightGraph.css'
 import PropTypes from 'prop-types';
 
+/**
+ * 
+ * @param activity weight and calories burn in last week 
+ * @returns Graphs which compare weight and calories burn per day
+ */
 export default function WeightGraph({activity}) {
 
   let day = 1;
 
+  /**
+   * x axis label customization
+   */
   if (activity && activity.sessions) {
     activity.sessions.map(e => {
       e.dayN = day.toString();

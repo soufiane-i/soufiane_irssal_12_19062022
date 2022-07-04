@@ -7,11 +7,18 @@ import PropTypes from 'prop-types';
 
 
 
-
+/**
+ * 
+ * @param {object} user general informations - name - dayScore 
+ * @param {object} activity weight and calories burn in last week
+ * @param {object} averageSession session duration
+ * @param {object} averagePerformance performence data in different domain
+ * @returns Page Structure and Composition Building
+ */
 export default function HomeTemp({user, activity, averageSession, averagePerformance}) {
 
     let firstName = ''
-    let keyData = ''
+    let nutrients = ''
     let performances = ''
     let score = ''
 
@@ -20,7 +27,7 @@ export default function HomeTemp({user, activity, averageSession, averagePerform
     }
 
     if(user !== undefined && user.keyData !== undefined ) {
-        keyData = user.keyData
+        nutrients = user.keyData
     }
 
     if(user !== undefined && user.todayScore !== undefined ) {
@@ -38,7 +45,7 @@ export default function HomeTemp({user, activity, averageSession, averagePerform
             <SportNavigation/>
             <article className='dashboardContainer'>
                 <DashboardHeader firstName={firstName}/>
-                <Dashboard score={score} keyData={keyData} activity={activity} averageSession={averageSession} performances={performances} />
+                <Dashboard score={score} nutrients={nutrients} activity={activity} averageSession={averageSession} performances={performances} />
             </article>
         </main>
         </>

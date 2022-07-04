@@ -6,6 +6,11 @@ export let activity;
 export let averageSession;
 export let performance;
 
+/**
+ * 
+ * @param {string} id 
+ * @returns Get Data depending on the id
+ */
 export default function GetApi(id) {
     
     const [dataUser, setUser] = useState({});

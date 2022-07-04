@@ -5,7 +5,17 @@ import AverageSessionDurationGraph from '../molecules/AverageSessionDurationGrap
 import PerformanceGraph from '../molecules/PerformanceGraph'
 import ScoreGraph from '../molecules/ScoreGraph'
 
-export default function Dashboard({score, keyData, activity, averageSession, performances}) {
+/**
+ * 
+ * @param {Number} score score of the day
+ * @param {Object} nutrients nutrients data (fat, protein, etc)
+ * @param {object} activity weight and calories burn in last week
+ * @param {object} averageSession activity duration per day
+ * @param {object} performances performence data in different domain (endruance, strenght, etc)
+ * @returns Dashbord containing all graphs
+ */
+export default function Dashboard({score, nutrients, activity, averageSession, performances}) {
+
 
     return(
         <article className="dashboard">
@@ -18,10 +28,10 @@ export default function Dashboard({score, keyData, activity, averageSession, per
                 </div>
             </div>
             <div className='dashboard_nutrients'>
-                <Nutrient value={keyData.calorieCount} unit="kCal" title="Calories" img="calories-icon"/>
-                <Nutrient value={keyData.proteinCount} unit="g" title="Proteines" img="protein-icon"/>
-                <Nutrient value={keyData.carbohydrateCount} unit="g" title="Glucides" img="carbs-icon"/>
-                <Nutrient value={keyData.lipidCount} unit="g" title="Lipides" img="fat-icon"/>
+                <Nutrient value={nutrients.calorieCount} unit="kCal" title="Calories" img="calories-icon"/>
+                <Nutrient value={nutrients.proteinCount} unit="g" title="Proteines" img="protein-icon"/>
+                <Nutrient value={nutrients.carbohydrateCount} unit="g" title="Glucides" img="carbs-icon"/>
+                <Nutrient value={nutrients.lipidCount} unit="g" title="Lipides" img="fat-icon"/>
             </div>
         </article>
     )

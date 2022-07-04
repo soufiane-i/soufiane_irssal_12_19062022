@@ -3,11 +3,15 @@ import './AverageSessionDurationGraph.css'
 
 /**
  * 
- * @param {*} param0 
- * @returns 
+ * @param {object} averageSession activity duration per day
+ * @returns Graph of activity duration per day
  */
 export default function AverageSessionDurationGraph({averageSession}) {
+  console.log(averageSession);
   
+    /**
+   * x axis label customization
+   */
   if (averageSession && averageSession.sessions) {
     averageSession.sessions.map(e => {
       if(e.day === 1) e.dayJ = "L"
