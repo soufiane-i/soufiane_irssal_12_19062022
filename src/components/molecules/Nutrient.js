@@ -1,21 +1,30 @@
 import NutrientIcon from "../atoms/NutrientIcon";
-import NutrientValue from "../atoms/NutrientValue";
 import './Nutrient.css'
 import PropTypes from 'prop-types';
 
 /**
- * @returns Nutrient card
+ * Nutrient Card
+ * @param {string} img icon 
+ * @param {number} value nutrient value 
+ * @param {string} unit nutrient unit 
+ * @param {string} title nutrient 
  */
-export default function Nutrient({img, value, unit, title}) {
+function Nutrient({img, value, unit, title}) {
     return(
         <div className="nutrient">
             <NutrientIcon img={img}/>
-            <NutrientValue value={value} unit={unit} title={title}/>
+            <div className="nutrientValue">
+            <p>{`${value}${unit}`}</p>
+            <p>{title}</p>
+        </div>
         </div>
     )
 }
 
-NutrientValue.propTypes = {
+export default Nutrient
+
+Nutrient.propTypes = {
+    img: PropTypes.string,
     value: PropTypes.number,
     unit: PropTypes.string,
     title: PropTypes.string,

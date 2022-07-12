@@ -1,8 +1,10 @@
 import './IconNav.css'
-
 import Icon from '../atoms/Icon'
 
-export default function IconNav() {
+/**
+ * IconNav - Icons in navigation
+ */
+function IconNav() {
     return(
         <nav className='iconNav'>
             <Icon src="icon1"/>
@@ -12,3 +14,5 @@ export default function IconNav() {
         </nav>
     )
 }
+
+export default IconNav

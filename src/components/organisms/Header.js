@@ -3,10 +3,9 @@ import NavigationBar from "../molecules/NavigationBar"
 import './Header.css'
 
 /**
- * 
- * @returns Page Header Structure and composition 
+ *  Header - Page Header Structure and composition 
  */
-export default function Header() {
+function Header() {
     return(
         <header>
             <Logo/>
@@ -14,3 +13,5 @@ export default function Header() {
         </header>
     )
 } 
+
+export default Header

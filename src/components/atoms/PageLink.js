@@ -1,11 +1,18 @@
 import './PageLink.css';
 import PropTypes from 'prop-types';
 
-export default function PageLink({link, text}) {
+/**
+ *  PageLinks
+ * @param {string} link link to the image
+ * @param {string} text hypertext link
+ */
+function PageLink({link, text}) {
     return(
         <a href={`/${link}`}>{text}</a>
     )
 }
+
+export default PageLink
 
 PageLink.propTypes = {
     link: PropTypes.string,

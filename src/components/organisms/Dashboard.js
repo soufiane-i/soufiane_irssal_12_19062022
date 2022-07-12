@@ -4,18 +4,17 @@ import './Dashboard.css'
 import AverageSessionDurationGraph from '../molecules/AverageSessionDurationGraph'
 import PerformanceGraph from '../molecules/PerformanceGraph'
 import ScoreGraph from '../molecules/ScoreGraph'
+import PropTypes from 'prop-types';
 
 /**
- * 
- * @param {Number} score score of the day
+ * Dashbord - containing all graphs
+ * @param {string} score score of the day
  * @param {Object} nutrients nutrients data (fat, protein, etc)
- * @param {object} activity weight and calories burn in last week
- * @param {object} averageSession activity duration per day
- * @param {object} performances performence data in different domain (endruance, strenght, etc)
- * @returns Dashbord containing all graphs
+ * @param {Object} activity weight and calories burn in last week
+ * @param {Object} averageSession activity duration per day
+ * @param {Object} performances performence data in different domain (endruance, strenght, etc)
  */
-export default function Dashboard({score, nutrients, activity, averageSession, performances}) {
-
+function Dashboard({score, nutrients, activity, averageSession, performances}) {
 
     return(
         <article className="dashboard">
@@ -36,3 +35,5 @@ export default function Dashboard({score, nutrients, activity, averageSession, p
         </article>
     )
 } 
+
+export default Dashboard

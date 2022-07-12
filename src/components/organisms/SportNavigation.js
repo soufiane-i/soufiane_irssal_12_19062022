@@ -4,10 +4,9 @@ import Copyright from '../atoms/Copyright'
 import IconNav from '../molecules/IconNav'
 
 /**
- * 
- * @returns Vertical nav containing links to each sport
+ * SportNavigation - Vertical nav containing links to each sport
  */
-export default function SportNavigation() {
+function SportNavigation() {
     return(
         <article className="sportNav">
             <IconNav/>
@@ -16,3 +15,5 @@ export default function SportNavigation() {
         
     )
 } 
+
+export default SportNavigation

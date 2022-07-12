@@ -1,17 +1,14 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import './AverageSessionDurationGraph.css'
+import './AverageSessionDurationGraph.css';
+import PropTypes from 'prop-types';
 
 /**
- * 
- * @param {object} averageSession activity duration per day
- * @returns Graph of activity duration per day
+ * AverageSessionDurationGraph - Graph of activity duration per day
+ * @param {Object} averageSession activity duration per day
  */
-export default function AverageSessionDurationGraph({averageSession}) {
-  console.log(averageSession);
-  
-    /**
-   * x axis label customization
-   */
+function AverageSessionDurationGraph({averageSession}) {
+
+
   if (averageSession && averageSession.sessions) {
     averageSession.sessions.map(e => {
       if(e.day === 1) e.dayJ = "L"
@@ -42,8 +39,10 @@ export default function AverageSessionDurationGraph({averageSession}) {
     )
 }
 
+export default AverageSessionDurationGraph
 
-const CustomTooltip = ({ active, payload, label }) => {
+
+const CustomTooltip = ({ active, payload}) => {
     if (active && payload && payload.length) {
       return (
         <div className="custom-tooltip">
@@ -55,7 +54,9 @@ const CustomTooltip = ({ active, payload, label }) => {
     return null;
   };
 
-
+  AverageSessionDurationGraph.propTypes = {
+    averageSession: PropTypes.object
+}
 
 
 

@@ -1,16 +1,13 @@
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
-import './PerformanceGraph.css'
+import './PerformanceGraph.css';
 
 /**
- * 
+ *  PerformanceGraph - Performences graph
  * @param {Object} performances performances data
- * @returns Performences graph
  */
-export default function PerformanceGraph(performances) {
-
-    /**
-   * x axis label customization
-   */
+function PerformanceGraph(performances) {
+ 
+  
     if (performances && performances.performances.data) {
         performances.performances.data.map(e => {
           if(e.kind === 1) e.kindName = 'cardio';
@@ -34,4 +31,6 @@ export default function PerformanceGraph(performances) {
         </div>
     )
 }
+
+export default PerformanceGraph
 

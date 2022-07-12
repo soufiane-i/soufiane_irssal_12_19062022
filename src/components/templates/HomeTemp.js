@@ -6,16 +6,14 @@ import DashboardHeader from '../organisms/DashboardHeader'
 import PropTypes from 'prop-types';
 
 
-
 /**
- * 
- * @param {object} user general informations - name - dayScore 
- * @param {object} activity weight and calories burn in last week
- * @param {object} averageSession session duration
- * @param {object} averagePerformance performence data in different domain
- * @returns Page Structure and Composition Building
+ * Page Structure and Composition Building
+ * @param {Object} user general informations - name - dayScore 
+ * @param {Object} activity weight and calories burn in last week
+ * @param {Object} averageSession session duration
+ * @param {Object} averagePerformance performence data in different domain
  */
-export default function HomeTemp({user, activity, averageSession, averagePerformance}) {
+function HomeTemp({user, activity, averageSession, averagePerformance}) {
 
     let firstName = ''
     let nutrients = ''
@@ -52,9 +50,14 @@ export default function HomeTemp({user, activity, averageSession, averagePerform
     )
 } 
 
+
+
 HomeTemp.propTypes = {
     user: PropTypes.object,
     activity: PropTypes.object,
     averageSession: PropTypes.object,
     averagePerformance: PropTypes.object,
 } 
+
+
+export default HomeTemp;

@@ -4,6 +4,9 @@
 
 ### With API
 
+To install modules:
+`yarn`
+
 In the Back-End project directory, run:
 `yarn dev`
 Run the back-end in http://localhost:3000

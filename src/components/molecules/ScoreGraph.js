@@ -2,17 +2,16 @@ import { RadialBarChart, PolarAngleAxis, RadialBar, ResponsiveContainer } from '
 import './ScoreGraph.css'
 
 
-export default function ScoreGraph(score) {
-    /**
-     * day score of the user to evaluate his global performance. 
-     * multiply by 10 to convert it in a pourcentage
-     * @type {number}
-     */
+/**
+ *  ScoreGraph - score of the day
+ * @param {number} score score of the day
+ */
+function ScoreGraph(score) {
+
+
     let todayScore = score.score *10;
 
-    /**
-    * x axis label customization
-    */
+
     const data = [
         { name: 'todayScore', x: todayScore, fill: '#E60000' },
       ];
@@ -58,3 +57,5 @@ export default function ScoreGraph(score) {
         </div>
     )
 }
+
+export default ScoreGraph

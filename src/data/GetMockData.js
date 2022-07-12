@@ -10,18 +10,14 @@ export let activity;
 export let averageSession;
 export let performance;
 
-export default function GetMockData(id) {
-    console.log(id);
-    if(id === "12")
-    {
+/**
+ * GetMockData - Get mock Data
+ */
+function GetMockData() {
         user = userFile.data;
         activity = activityFile.data;
         averageSession = averageSessionFile.data;
         performance = performanceFile.data;
-    }
-    }
-
-
-GetMockData.propTypes = {
-    id: PropTypes.number
 }
+
+export default GetMockData;

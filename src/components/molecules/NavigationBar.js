@@ -1,7 +1,10 @@
 import './NavigationBar.css'
 import PageLink from '../atoms/PageLink'
 
-export default function NavigationBar() {
+/**
+ *  NavigationBar
+ */
+function NavigationBar() {
     return(
         <nav>
             <PageLink text="Acceuil"/>
@@ -11,3 +14,5 @@ export default function NavigationBar() {
         </nav>
     )
 }
+
+export default NavigationBar
