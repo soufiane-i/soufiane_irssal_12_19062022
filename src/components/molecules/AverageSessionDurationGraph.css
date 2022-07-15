@@ -1,11 +1,29 @@
-.lineChart {
-    width: 25%;
+.chartContainer
+{
+    width: 28%;
     height: 250px;
-    background-color: #FF0000;
     border-radius: 10px;
-    padding: 0 20px;
+    padding-right: 12px;
     position: relative;
     border-radius: 5px;
+    background-color: #FF0000;
+}
+
+
+
+.lineChart {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    padding-left: 10px;
+    position: relative;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.lineChart:hover{
+    background-color: #FF0000;
+    border-radius: 10px;
 }
 
 .custom-tooltip {
@@ -27,4 +45,56 @@
     font-weight: 500;
     width: 150px;
     line-height: 25px;
+    z-index: 2;
+}
+
+.customHover
+{
+    position: relative;
+    border-radius: 20px;
+}
+
+.days
+{
+    width: 96%;
+    position: absolute;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.8;
+    z-index: 2;
+    bottom: 12px;
+    display: flex;
+    border-radius: 10px;
+}
+
+
+ @media screen and (max-width: 1040px ) {
+    .chartContainer
+    {
+        width: 30%;
+        padding-right: 5px;
+    }
+
+    .days
+    {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1480px ) {
+    .chartContainer
+    {
+        width: 30%;
+        padding-right: 10px;
+    }
+
+    .days
+    {
+        width: 90%;
+    }
+
+    .lineChart h2 {
+        left: 20px;
+    }
 }

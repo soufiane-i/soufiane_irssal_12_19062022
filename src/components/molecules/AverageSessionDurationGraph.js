@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
  */
 function AverageSessionDurationGraph({averageSession}) {
 
-
   if (averageSession && averageSession.sessions) {
     averageSession.sessions.map(e => {
       if(e.day === 1) e.dayJ = "L"
@@ -20,21 +19,30 @@ function AverageSessionDurationGraph({averageSession}) {
       if(e.day === 7) e.dayJ = "D"
     }) 
   } 
-
-
-   
+  
     return (
-        <div className='lineChart'>
-            <h2>Durée Moyenne des Sessions</h2>
-            <ResponsiveContainer  width='100%' height='100%' >
-              <LineChart data={averageSession.sessions}>
-                  <CartesianGrid strokeDasharray="3 3" vertical={false} horizontal={false}/>
-                  <XAxis dataKey="dayJ" stroke='#d6d6d6' axisLine={false} tickLine={false} fontSize={12}/>
-                  <YAxis dataKey="sessionLength" width={0} domain={['dataMin - 5', 'dataMax + 15']}/>
-                  <Tooltip content={<CustomTooltip />}/>
-                  <Line type="monotone" dataKey="sessionLength" stroke="#d6d6d6" dot={false} strokeWidth={2}/>
-              </LineChart>
-            </ResponsiveContainer>
+      <div className='chartContainer'>
+          <div className='lineChart'>
+              <h2>Durée Moyenne des Sessions</h2>
+              <div className='days'>
+                <p>L</p>
+                <p>M</p>
+                <p>M</p>
+                <p>J</p>
+                <p>V</p>
+                <p>S</p>
+                <p>D</p>
+              </div>
+              <ResponsiveContainer  width='100%' height='100%' >
+                <LineChart data={averageSession.sessions}>
+                    <CartesianGrid strokeDasharray="3 3" vertical={false} horizontal={false}/>
+                    <XAxis dataKey="dayJ"  stroke='#d6d6d6' axisLine={false} tickLine={false} fontSize={0}  />
+                    <YAxis dataKey="sessionLength" width={0} domain={['dataMin - 5', 'dataMax + 15']}/>
+                    <Tooltip content={<CustomTooltip />} cursor={<CustomHover/>} wrapperStyle={{zIndex: 1100}}/>
+                    <Line type="monotone" dataKey="sessionLength" stroke="#d6d6d6" dot={false} strokeWidth={2}/>
+                </LineChart>
+              </ResponsiveContainer>
+          </div>
         </div>
     )
 }
@@ -60,3 +68,15 @@ const CustomTooltip = ({ active, payload}) => {
 
 
 
+const CustomHover = ({ points }) => {
+  return (
+    <rect
+      className='customHover'
+      x={points[0].x}
+      height="100%"
+      width="100%"
+      fill="#E60000"
+      radius={100}
+    />
+  );
+}

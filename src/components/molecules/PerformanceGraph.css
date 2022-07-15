@@ -4,3 +4,17 @@
     height: 250px;
     border-radius: 5px;
 }
+
+@media screen and (min-width: 1040px) and (max-width: 1480px ) {
+    .radiochart
+    {
+        width: 38%;
+    }
+}
+
+ @media screen and (max-width: 1040px ) {
+    .radiochart
+    {
+        width: 38%;
+    }
+} 

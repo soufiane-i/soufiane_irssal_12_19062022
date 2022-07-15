@@ -1,8 +1,7 @@
-import PropTypes from 'prop-types';
 import userFile from '../mock/user/12.json';
-import activityFile from '../mock/user/12/activity.json'
-import averageSessionFile from '../mock/user/12/average-sessions.json'
-import performanceFile from '../mock/user/12/performance.json'
+import activityFile from '../mock/user/12/activity.json';
+import averageSessionFile from '../mock/user/12/average-sessions.json';
+import performanceFile from '../mock/user/12/performance.json';
 
 
 export let user;

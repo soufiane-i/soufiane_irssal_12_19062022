@@ -8,9 +8,7 @@ import './ScoreGraph.css'
  */
 function ScoreGraph(score) {
 
-
     let todayScore = score.score *10;
-
 
     const data = [
         { name: 'todayScore', x: todayScore, fill: '#E60000' },
@@ -27,33 +25,12 @@ function ScoreGraph(score) {
               </div>
             </div>
       <ResponsiveContainer width='100%' height='100%'>
-      <RadialBarChart data={data}
-      innerRadius='100%'
-      barSize={10}
-      startAngle={90}
-      endAngle={450}
-      className='recharts-radial'
-      >
-        <PolarAngleAxis
-          type="number"
-          domain={[0, 10]}
-          angleAxisId={0}
-          tick={false}
-        />
-        <RadialBar
-          dataKey="x"
-          cornerRadius={15}
-        />
-        <text
-          x={30 / 2}
-          y={33 / 2}
-          textAnchor="middle"
-          dominantBaseline="middle"
-          className="progress-label"
-        >
-        </text>
-      </RadialBarChart>
-    </ResponsiveContainer>
+        <RadialBarChart data={data} innerRadius='100%' barSize={10} startAngle={90} endAngle={450} className='recharts-radial'>
+          <PolarAngleAxis type="number" domain={[0, 10]} angleAxisId={0} tick={false} />
+          <RadialBar dataKey="x" cornerRadius={15}/>
+          <text x={30 / 2} y={33 / 2} textAnchor="middle" dominantBaseline="middle" className="progress-label"></text>
+        </RadialBarChart>
+      </ResponsiveContainer>
         </div>
     )
 }

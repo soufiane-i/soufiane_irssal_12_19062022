@@ -17,8 +17,6 @@ function GetApi(id) {
     const [dataAverageSession, setAverageSession] = useState({});
     const [dataPerformance, setPerformance] = useState({});
 
-    
- 
      useEffect(() => {
         fetch(`http://localhost:3000/user/${id}`)
         .then((res) => res.json())

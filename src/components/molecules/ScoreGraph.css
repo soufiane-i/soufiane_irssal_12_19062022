@@ -59,8 +59,8 @@
 
 @media screen and (min-width: 1024px) and (max-width: 1480px ) {
     .innercircle {
-        width:calc(68vw / 6);
-        height:calc(68vw / 6);
+        width:calc(55vw / 6);
+        height:calc(55vw / 6);
     }
 
     .innercircle p span {
@@ -71,12 +71,27 @@
     .innercircle p  {
         font-size: 14px;
     }
+    .radialchart {
+        width: 20%;
+    }
 }
 
  @media screen and (max-width: 1040px ) {
+    .radialchart {
+        width: 20%;
+    }
     .innercircle {
-        width:calc(65vw / 6);
-        height:calc(65vw / 6);
+        width:calc(55vw / 6);
+        height:calc(55vw / 6);
+    }
+
+    .innercircle p span {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .innercircle p  {
+        font-size: 12px;
     }
 } 
 

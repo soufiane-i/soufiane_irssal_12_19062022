@@ -25,3 +25,12 @@ main {
     flex-direction: column;
     justify-content: space-between;
 }
+
+
+@media screen and (max-height: 950px) {
+    .dashboardContainer {
+        padding: 30px 2%;
+    }
+}
+
+

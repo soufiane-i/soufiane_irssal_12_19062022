@@ -32,6 +32,9 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1660px) {
+    .nutrientValue {
+        width: 70px;
+    }
     .nutrientValue p:nth-child(1) {
         font-size: 16px ;
     }
