@@ -23,28 +23,32 @@ function GetApi(id) {
         .then( (result) => {
               setUser(result.data)
           })
+        .catch(setUser(undefined))
           fetch(`http://localhost:3000/user/${id}/activity`)
           .then((res) => res.json())
           .then( (result) => {
                 setActivity(result.data)
             })
+        .catch(setActivity(undefined))
             fetch(`http://localhost:3000/user/${id}/average-sessions`)
             .then((res) => res.json())
             .then( (result) => {
                   setAverageSession(result.data)
               })
+            .catch(setAverageSession(undefined))
               fetch(`http://localhost:3000/user/${id}/performance`)
               .then((res) => res.json())
               .then( (result) => {
                     setPerformance(result.data)
                 })
+            .catch(setPerformance(undefined))
      }, [])
 
      user = dataUser;
      activity = dataActivity;
      averageSession = dataAverageSession;
      performance = dataPerformance;
-
+     console.log(performance);
 }
 
 export default GetApi
